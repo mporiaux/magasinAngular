@@ -1,0 +1,43 @@
+{
+  "clients": [
+    {
+      "idclient": 1,
+      "nom": "Durant",
+      "prenom": "Jean",
+      "cp": 7000,
+      "localite": "Mons",
+      "rue": "de la rivière",
+      "num": "45",
+      "tel": "0478225588"
+    },
+    {
+      "idclient": 3,
+      "nom": "Lerouge",
+      "prenom": "Patrick",
+      "cp": 1000,
+      "localite": "Bxl",
+      "rue": "de l'atomium",
+      "num": "2",
+      "tel": "0478123456"
+    },
+    {
+      "idclient": 4,
+      "nom": "Levert",
+      "prenom": "Carine",
+      "cp": "4000",
+      "localite": "Liège",
+      "rue": "de la Meuse",
+      "num": "78",
+      "tel": "04152223355"
+    }
+  ],
+  "comfacts" : [
+    {
+      "numcommande": 1,
+      "numfact": null,
+       "datecom": "2021-02-05",
+       "montant": 1000.25,
+       "clientId": 3
+    }
+  ]
+}

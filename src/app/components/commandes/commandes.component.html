@@ -1,0 +1,10 @@
+ <form  (ngSubmit)="onSearch()" class="form-inline">
+  <label>NUMERO DE COMMANDE</label>
+  <input [(ngModel)]="numcommande"  name="numcommande" type="text" >
+  <button class="btn btn-sm btn-outline-info m-lg-2">
+          <span class = "fa fa-search"> </span>
+  </button>
+</form>
+<ng-container *ngIf="comfact">
+  <app-editcommande [comfact] ="comfact"></app-editcommande>
+</ng-container>
