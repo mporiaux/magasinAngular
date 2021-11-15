@@ -14,7 +14,8 @@
     </li>
   </ul>
 </nav>
-<ng-container *ngIf="clients" >
+<ng-container *ngIf="clients">
+  <ng-container *ngIf="clients.length>0 else inconnu">
     <table  class="table">
       <thead>
       <th>IdClient</th>
@@ -52,4 +53,10 @@
       </tbody>
     </table>
   </ng-container>
+  <ng-template #inconnu>
+    Nom inconnu
+  </ng-template>
+</ng-container>
+
+
 

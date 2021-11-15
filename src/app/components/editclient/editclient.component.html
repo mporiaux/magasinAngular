@@ -100,6 +100,7 @@
     </nav>
   </form>
     <ng-container *ngIf="comfacts" >
+      <ng-container *ngIf="comfacts.length>0 else vide">
     <table  class="table">
       <thead>
       <th>Numcommande</th>
@@ -118,6 +119,10 @@
       </tr>
       </tbody>
     </table>
+    </ng-container>
+      <ng-template #vide>
+        Aucune commande pour ce client
+      </ng-template>
     </ng-container>
 
   <app-newcomfact [cliact]="clientFormGroup" (newComfact)="onAddComfact($event)"></app-newcomfact>
