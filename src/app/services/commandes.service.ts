@@ -14,9 +14,8 @@ export class ComfactService{
     return this.http.delete<void>(this.host + '/comfacts/' +
       c.numcommande);
   }
-  save(c: Comfact,cl:Client): Observable<Comfact>{
-    c.client=cl;
-    return this.http.post<Comfact>(this.host + '/comfacts/',c);
+  save(c: Comfact): Observable<Comfact>{
+       return this.http.post<Comfact>(this.host + '/comfacts/',c);
   }
   getComfact(numcommande: number): Observable<Comfact>{
     return this.http.get<Comfact>(this.host + '/comfacts/' + numcommande);
