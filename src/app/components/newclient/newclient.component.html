@@ -1,5 +1,11 @@
 <div class="container">
+
   <form [formGroup]="clientFormGroup" *ngIf="clientFormGroup">
+
+    <div class = "form-group">
+      <label>Idclient</label>
+      <input type ="text" class="form-control" value="{{idclient}}" readonly="readonly">
+    </div>
 
     <div class = "form-group">
       <label>Nom</label>

@@ -19,14 +19,10 @@ export class EditcommandeComponent implements OnInit {
   ngOnInit(): void {
        this.comfactFormGroup = this.fb.group({
       numcommande: [this.comfact?.numcommande],
-      numfact: [this.comfact?.numfact,
-        Validators.compose([Validators.required, Validators.min(1)])],
+      numfact: [this.comfact?.numfact,[Validators.required, Validators.min(1)]],
       datecom: [this.comfact?.datecom, Validators.required],
-      etat :[this.comfact?.etat,
-        Validators.compose([Validators.required,Validators.pattern("^(?:C|F|P)$")])
-      ],
-      montant: [this.comfact?.montant,
-        Validators.compose([Validators.required, Validators.min(0)])]
+      etat :[this.comfact?.etat,[Validators.required,Validators.pattern("^(?:C|F|P)$")]],
+      montant: [this.comfact?.montant,[Validators.required, Validators.min(0)]]
     });
   }
   onUpdateComfact(): void {
