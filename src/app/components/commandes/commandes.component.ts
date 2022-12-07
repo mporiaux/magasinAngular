@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {Comfact} from '../../entities/comfact.entities';
-import {FormBuilder} from '@angular/forms';
-import {formatDate} from '@angular/common';
-import {Router} from '@angular/router';
 import {ComfactService} from "../../services/commandes.service";
 @Component({
   selector: 'app-commandes',
@@ -12,13 +9,15 @@ import {ComfactService} from "../../services/commandes.service";
 export class CommandesComponent implements OnInit {
   comfact: Comfact|null=null;
   numcommande :number=0;
-  constructor(private comfactService: ComfactService, private router:Router) {
+  constructor(private comfactService: ComfactService) {
   }
   ngOnInit(): void {}
   onSearch() {
     this.comfact=null;
     this.comfactService.getComfact(this.numcommande).subscribe(
-      data => {this.comfact=data},err =>{alert("commande introuvable")});
+    {next : data => this.comfact=data,
+      error : error=>alert("commande introuvable")
+    })
   }
   /* onSearch(value: any) {
    this.comfact=null;

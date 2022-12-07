@@ -21,6 +21,7 @@ export class ComfactService{
     return this.http.get<Comfact>(this.host + '/comfacts/' + numcommande);
   }
   updateComfact(c: Comfact): Observable<Comfact>{
+
       return this.http.put<Comfact>(this.host + '/comfacts/' +
       c.numcommande, c);
   }
