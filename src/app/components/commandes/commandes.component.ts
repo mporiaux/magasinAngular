@@ -8,20 +8,20 @@ import {ComfactService} from "../../services/commandes.service";
 })
 export class CommandesComponent implements OnInit {
   comfact: Comfact|null=null;
-  numcommande :number=0;
+  idcommande :number=0;
   constructor(private comfactService: ComfactService) {
   }
   ngOnInit(): void {}
   onSearch() {
     this.comfact=null;
-    this.comfactService.getComfact(this.numcommande).subscribe(
+    this.comfactService.getComfact(this.idcommande).subscribe(
     {next : data => this.comfact=data,
       error : error=>alert("commande introuvable")
     })
   }
   /* onSearch(value: any) {
    this.comfact=null;
-   this.comfactService.getComfact(value.numcommande).subscribe(
+   this.comfactService.getComfact(value.idcommande).subscribe(
    data => {this.comfact=data},err =>{alert("commande introuvable")});
    }*/
 }

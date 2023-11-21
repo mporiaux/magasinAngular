@@ -4,21 +4,21 @@
       <thead>
       <th>Numcommande</th>
       <th>Numfact</th>
-      <th>Datecom</th>
+      <th>Datecommande</th>
       <th>Etat</th>
       <th>Montant</th>
       </thead>
       <tbody>
-      <td *ngIf="cf ;else vide">{{cf.numcommande}} </td>
+      <td *ngIf="cf ;else vide">{{cf.idcommande}} </td>
       <ng-template #vide><td></td></ng-template>
       <td></td>
       <td> <input type ="date" class="form-control"
-                  formControlName="datecom"></td>
+                  formControlName="datecommande"></td>
       <td>
       <select formControlName="etat">
-        <option>C</option>
-        <option>F</option>
-        <option>P</option>
+        <option>c</option>
+        <option>f</option>
+        <option>p</option>
       </select>
       </td>
      <td> <input type ="text" class="form-control"  formControlName="montant"></td>

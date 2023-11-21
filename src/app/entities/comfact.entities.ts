@@ -1,8 +1,8 @@
 import {Client} from './client.entities';
 export interface Comfact {
-  numcommande: number;
+  idcommande: number;
   numfact: number;
-  datecom: string;
+  datecommande: string;
   etat: string;
   montant: number;
   client: Client;

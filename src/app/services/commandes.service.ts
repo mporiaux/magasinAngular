@@ -12,18 +12,18 @@ export class ComfactService{
   }
   deleteComfact(c: Comfact): Observable<void>{
     return this.http.delete<void>(this.host + '/comfacts/' +
-      c.numcommande);
+      c.idcommande);
   }
   save(c: Comfact): Observable<Comfact>{
        return this.http.post<Comfact>(this.host + '/comfacts/',c);
   }
-  getComfact(numcommande: number): Observable<Comfact>{
-    return this.http.get<Comfact>(this.host + '/comfacts/' + numcommande);
+  getComfact(idcommande: number): Observable<Comfact>{
+    return this.http.get<Comfact>(this.host + '/comfacts/' + idcommande);
   }
   updateComfact(c: Comfact): Observable<Comfact>{
 
       return this.http.put<Comfact>(this.host + '/comfacts/' +
-      c.numcommande, c);
+      c.idcommande, c);
   }
   getComfactsClient(idClient: number) : Observable<Comfact[]>{
     return this.http.get<Comfact[]>(this.host + '/comfacts/idclient=' +

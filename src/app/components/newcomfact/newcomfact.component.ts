@@ -19,8 +19,8 @@ export class NewcomfactComponent implements OnInit {
     ComfactService) { }
   ngOnInit(): void {
     this.comfactFormGroup = this.fb.group({
-      datecom :[formatDate(new Date(), 'yyyy-MM-dd', 'en')],
-      etat:['C'],
+      datecommande :[formatDate(new Date(), 'yyyy-MM-dd', 'en')],
+      etat:['c'],
       montant: ['0'],
     });
   }

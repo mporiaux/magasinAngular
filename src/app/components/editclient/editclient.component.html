@@ -119,9 +119,9 @@ clientFormGroup.controls.tel.errors}">
         </thead>
         <tbody>
         <tr *ngFor="let com of comfacts">
-          <td>{{com.numcommande}}</td>
+          <td>{{com.idcommande}}</td>
           <td>{{com.numfact}}</td>
-          <td>{{com.datecom|date: 'dd-MM-yyyy'}}</td>
+          <td>{{com.datecommande|date: 'dd-MM-yyyy'}}</td>
           <td>{{com.etat}}</td>
           <td>{{com.montant}}</td>
         </tr>
